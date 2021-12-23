@@ -1,7 +1,10 @@
 /*
 1. Create a function named `sayHello` that alerts a message `Hello World!`.
 */
-
+function sayHello()
+{
+  alert("Hello World!")
+}
 /*
 2. Create a function named `fullName` with the following steps:
 
@@ -10,7 +13,13 @@
   - Concat the value of fistName and lastName and store it in another variable named `fullName`.
   - Alert `fullName`
 */
-
+function fullName()
+{
+let firstName=prompt("enter your first name");
+let lastName=prompt("enter your last name");
+let fullName= firstName +" "+ lastName;
+alert(`${fullName}`)
+}
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
 
@@ -19,6 +28,15 @@
   - Add the value of firstNum and secondNum and store it in another variable named `sum`.
   - Alert `sum`
 */
+
+function addTwoNumbers()
+{
+  let firstNum=+prompt("enter the first number");
+  let secondNum=+prompt("enter the second number");
+
+  let sum =firstNum+secondNum;
+  alert(`the sum of the numbers is:${sum}`)
+}
 
 /*
 4. Create a function named `getTable` with the following steps:
@@ -38,6 +56,16 @@
   9 * 9 = 81
   9 * 10 = 90
 */
+function getTable()
+{
+let num=+prompt("enter a number here...");
+let table=0;
+for(let i=1;i<=10;i++)
+{
+  table = num*i;
+  console.log(`${num}*${i}=${table}`);
+}
+}
 
 /*
 5. Create a function named `isLeapYear` with the following steps:
@@ -45,6 +73,17 @@
   - Prompts a message saying `Enter a year` and store the value into variable named`year`
   - Alert `[year] is a leap year` otherwise `[year] is not a leap year`
 */
+function isLeapYear()
+{
+  let year=prompt("enter a year");
+  if(year % 4===0)
+  {
+    console.log(`the year: ${year} is a leap year`);
+  }
+  else{
+    console.log(`the year: ${year} is not a leap year`)
+  }
+}
 
 /*
 6. Create a function named `getFactorial` with the following steps:
@@ -53,3 +92,14 @@
   - Alert `The factorial of [number] is [factorial]`
 
 */
+
+function getFactorial()
+{
+  let number=+prompt("enter a number here...")
+  let factorial=1;
+  for(let i=1; i<=number; i++)
+  {
+   factorial=factorial*i;
+  }
+  console.log(`${factorial}`);
+}
